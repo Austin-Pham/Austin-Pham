@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: red;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -76,7 +76,13 @@
 				/* Your Code to Increase positionX by 10 HERE */
 				positionX = positionX + speed;
 			    moveBoxTo(positionX);
-
+				if (positionX > boardWidth) {
+					speed = speed * -1
+				}
+				if (positionX < screenLeft) {
+					speed = speed * -1
+				}
+				
                 
 			};
 
@@ -92,10 +98,17 @@
 
 				changeBoxText(points);
 
-				speed = speed + 3;
+				if (speed >= 1) {
+					speed = speed + 3
+				}
+				else if (speed <= -1) {
+					speed = speed - 3
+				}
+
 
 
 			};
+
 		})();
 	</script>
 </body>
