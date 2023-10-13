@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: red;
+			background-color: blue;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -43,6 +43,7 @@
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
+			
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -108,6 +109,12 @@
 
 
 			};
+			function randomColor(color1, color2, color3) {
+				colorStr = "rgb(color1, color2, color3)";
+				box.css('background-color', colorStr);
+			}
+			randomColor(Math.random() * 255, Math.random() * 255, Math.random() * 255)
+			
 
 		})();
 	</script>
