@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: blue;
+			background-color: red; 
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -97,6 +97,7 @@
 
                 points = points + 1;
 
+
 				changeBoxText(points);
 
 				if (speed >= 1) {
@@ -109,11 +110,6 @@
 
 
 			};
-			function randomColor(color1, color2, color3) {
-				colorStr = "rgb(color1, color2, color3)";
-				box.css('background-color', colorStr)
-			}
-			randomColor(Math.random() * 255, Math.random() * 255, Math.random() * 255)
 			
 
 		})();
