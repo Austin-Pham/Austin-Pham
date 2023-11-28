@@ -53,7 +53,7 @@ for(var loops = 0; loops <= 100; loops++) {
 // The hard-coded code that was originallly here was deleted because 1. The rule DRY(Don't repeat yourself) and 2. The loop code also takes over the hard code, making it basically useless while the loop is there.//
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-
+//Same reason as the above text//
             // TODO 9 : Iterate over the array
            
             
