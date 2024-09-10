@@ -64,13 +64,16 @@ dataShapes.goodBehavior;
  
   
   // TODO 3-a: add a function that handles the static display type
-  function handleStatic(data) {
+  /*function handleStatic(data) {
     setBackgroundWithObject(data);
     animationDetails.displayType = 1;
-  }
+  } */
 
   // TODO 4-a: add a function that handles the good display type
-  
+  /*function handleGood(color, shape, repeat) {
+    setBackgroundWithSimple(color, shape, repeat);
+    animationDetails.displayType = 2;
+  } */
 
   // TODO 5-a: add a function that handles the bad display type
   
@@ -81,7 +84,7 @@ dataShapes.goodBehavior;
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handleStatic()
+    
   }
 
   function goodDisplay() {
