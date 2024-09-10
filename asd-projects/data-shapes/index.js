@@ -50,19 +50,24 @@ dataShapes.goodBehavior;
 
  for (var i = 0; i < dataShapes.length; i++) {
   var currentShape = dataShapes[i];
+
+  if (currentShape.color === "red") {
+    currentShape.goodBehavior = "bounce";
+  }
+  else if (currentShape.color === "blue") {
+    currentShape.goodBehavior = "blink";
+  }
+  else {
+    currentShape.goodBehavior = "spin";
+  }
  }
- if (currentShape.color === "red") {
-  return currentShape.goodBehavior = "bounce";
- }
- else if (currentShape.color === "blue") {
-  return currentShape.goodBehavior = "blink";
- }
- else {
-  return currentShape.goodBehavior = "spin"
- }
+ 
   
   // TODO 3-a: add a function that handles the static display type
-  
+  function handleStatic(data) {
+    setBackgroundWithObject(data);
+    animationDetails.displayType = 1;
+  }
 
   // TODO 4-a: add a function that handles the good display type
   
@@ -76,7 +81,7 @@ dataShapes.goodBehavior;
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    
+    handleStatic()
   }
 
   function goodDisplay() {
