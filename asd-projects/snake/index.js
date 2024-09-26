@@ -166,10 +166,7 @@ function hasCollidedWithApple() {
   
   HINT: Both the apple and the snake's head are aware of their own row and column
   */
-  if (snake.head.row === apple.row) {
-    return true
-  }
-  else if (snake.head.column === apple.column) {
+  if (snake.head.row === apple.row && snake.head.column === apple.column) {
     return true
   }
 
