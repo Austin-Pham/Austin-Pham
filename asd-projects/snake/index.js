@@ -69,7 +69,7 @@ function update() {
     endGame();
   }
 
-  if (hasCollideWithSnake()) {
+  if (hasCollidedWithApple()) {
     handleAppleCollision();
   }
 }
@@ -195,6 +195,22 @@ function handleAppleCollision() {
   var column = 0;
 
   // code to determine the row and column of the snakeSquare to add to the snake
+  if (snake.tail.direction === "left") {
+    row = snake.tail.row;
+    column = snake.tail.column + 1;
+  }
+  else if (snake.tail.direction === "right") {
+    row = snake.tail.row;
+    column = snake.tail.column - 1;
+  }
+  else if (snake.tail.direction === "up") {
+    row = snake.tail.row + 1;
+    column = snake.tail.column;
+  }
+  else if (snake.tail.direction === "down") {
+    row = snake.tail.row - 1;
+    column = snake.tail.column;
+  }
 
   makeSnakeSquare(row, column);
 }
